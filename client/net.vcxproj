@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AFBEF92F-2D48-45FA-ABBB-7B695915B4C0}</ProjectGuid>
+    <RootNamespace>net</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Converter.hpp" />
+    <ClInclude Include="EpollPolicy.hpp" />
+    <ClInclude Include="InetAddr.hpp" />
+    <ClInclude Include="IOVec.hpp" />
+    <ClInclude Include="NetHandler.hpp" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="PollPolicy.hpp" />
+    <ClInclude Include="Reactor.hpp" />
+    <ClInclude Include="ReactorPolicy.hpp" />
+    <ClInclude Include="SetupNetwork.hpp" />
+    <ClInclude Include="Socket.hpp" />
+    <ClInclude Include="SocketAcceptor.hpp" />
+    <ClInclude Include="SocketConnector.hpp" />
+    <ClInclude Include="SocketIO.hpp" />
+    <ClInclude Include="SocketStream.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EpollPolicy.cpp" />
+    <ClCompile Include="InetAddr.cpp" />
+    <ClCompile Include="IOVec.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NetHandler.cpp" />
+    <ClCompile Include="PollPolicy.cpp" />
+    <ClCompile Include="Reactor.cpp" />
+    <ClCompile Include="ReactorPolicy.cpp" />
+    <ClCompile Include="SetupNetwork.cpp" />
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="SocketAcceptor.cpp" />
+    <ClCompile Include="SocketConnector.cpp" />
+    <ClCompile Include="SocketIO.cpp" />
+    <ClCompile Include="SocketStream.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
